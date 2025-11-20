@@ -1,16 +1,76 @@
-# React + Vite
+# 🧩 TechNova Frontend (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-Build-orange)
+![Axios](https://img.shields.io/badge/API-Axios-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-Currently, two official plugins are available:
+## 🚀 Présentation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Le **frontend TechNova** est une application **React 18 (Vite)** permettant aux **clients** et **vendeurs** d’interagir avec l’API Symfony.
+Elle offre une expérience utilisateur fluide : navigation produit, panier, paiement Stripe, espace vendeur et authentification JWT.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Stack technique
 
-## Expanding the ESLint configuration
+- **React 18**
+- **Vite 5**
+- **Axios** pour les requêtes API
+- **React Router DOM** pour la navigation
+- **Context API / Reducer** pour la gestion d’état
+- **JWT** pour l’authentification
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Installation locale
+
+```bash
+git clone https://github.com/baptistev59/technova-frontend.git
+cd technova-frontend
+npm install
+npm run dev
+```
+
+L’application sera accessible sur : **http://localhost:5173**
+
+---
+
+## 🌐 Configuration
+
+Créer un fichier `.env` à la racine :
+
+```env
+VITE_API_URL=http://localhost:8000/api
+VITE_STRIPE_PUBLIC_KEY=pk_test_...
+```
+
+---
+
+## 💻 Scripts utiles
+
+```bash
+npm run dev       # Démarrer le serveur de développement
+npm run build     # Construire la version production
+npm run preview   # Prévisualiser le build
+```
+
+---
+
+## ☁️ Déploiement (Vercel)
+
+1. Connecter le dépôt GitHub
+2. Ajouter les variables `VITE_API_URL` et `VITE_STRIPE_PUBLIC_KEY`
+3. Déployer automatiquement via Vercel
+
+---
+
+## 👤 Auteur
+
+**Développé par : Baptiste VANDAELE**
+
+---
+
+## 📜 Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier `LICENSE` pour plus d’informations.
