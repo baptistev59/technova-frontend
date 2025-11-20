@@ -1,8 +1,13 @@
 import axios from "axios";
 
-// Configuration de l'API
+// 🔥 On utilise la variable Vite en priorité, sinon fallback localhost
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+
+console.log("📡 API utilisée =", API_URL);
+
+// Configuration de l'API Axios
 const api = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: API_URL,
     headers: {
         "Content-Type": "application/json",
     },
@@ -17,7 +22,7 @@ api.interceptors.request.use(
         }
         return config;
     },
-    (_error) => Promise.reject(_error)
+    (error) => Promise.reject(error)
 );
 
 export default api;
